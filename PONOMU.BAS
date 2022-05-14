@@ -8,8 +8,8 @@
    80 /*＝＝＝＝＝＝＝＝＝＝＝＝＝＝メイン＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
    90 func mein():m_sta():while 2
   100 yaji():h1=(mx-32)/16+((my-32)/16)*12:px=pix/16:py=piy/16
-  110 if at(h1)=10 and mr=-1 and pb=0 then at(h1)=0:m_play(2):b_put(h1,0):pb=pb+1:atai(2)
-  120 if at(h1)=0 and ml=-1 and pb=1 then at(h1)=2:m_play(3):b_put(h1,2):pb=pb-1:atai(2)
+  110 if at(h1)=10 and mr=-1 and pb=0 then at(h1)=0:b_put(h1,0):pb=pb+1:atai(2)/*:m_play(2)
+  120 if at(h1)=0 and ml=-1 and pb=1 then at(h1)=2:b_put(h1,2):pb=pb-1:atai(2)/*:m_play(3)
   130 h1=pix/16+((piy+15)/16)*12:h2=(pix+15)/16+((piy+15)/16)*12
   140 h3=pix/16+((piy+17+2*sp)/16)*12:h4=(pix+15)/16+((piy+17+2*sp)/16)*12
   150 h6=pix/16+((piy-2-2*sp)/16)*12
@@ -20,7 +20,7 @@
   200 if at(h3)=4 and at(h4)=4 and no=0 then se=se+2+2*sp:piy=piy+2+2*sp:no=1:ot=1
   210 if at(h3)=1 and at(h4)=1 and no=0 then se=se+2+2*sp:piy=piy+2+2*sp:no=1:ot=1
   220 if at(h1)=4 and at(h2)=4 and pk=-1 then st=st+1:m_sta()
-  230 if (at(h1)=1 and at(h2)=1) then m_play(1):pk=pk-1:at(h1)=0:b_put(h1,0):atai(3)
+  230 if (at(h1)=1 and at(h2)=1) then pk=pk-1:at(h1)=0:b_put(h1,0):atai(3)/*:m_play(1)
   240 if ml=-1 and mr=-1 then m_sta()
   250 if se>48 then si=1
   260 h1=(pix+ix+(ix>0)*(-15))/16+(piy/16)*12/*+sp
